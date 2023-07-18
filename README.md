@@ -52,3 +52,11 @@ This can be done using the following command:
 | ESP-IDF $\geqslant$ v4.x | ESP-IDF v3.x |
 | ------------- | ------------ |
 | `idf.py -p <DEVICE_PORT> erase-flash` | `make ESPPORT=<DEVICE_PORT> erase_flash` |
+
+## Local development setup
+
+To setup the lsp properly for local development symlink the file `compile_commands.json` in the root directory for clangd to find.
+
+```sh
+ln -s examples/aggregates/build/compile_commands.json ./compile_commands.json
+```
