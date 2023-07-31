@@ -1,0 +1,11 @@
+#include "astarte_interface.h"
+
+{% for interface in interfaces %}
+const astarte_interface_t {{ interface.simple_name }} = {
+    .name = "{{ interface.name }}",
+    .major_version = {{ interface.major }},
+    .minor_version = {{ interface.minor }},
+    .ownership = {{ interface.ownership }},
+    .type = {{ interface.type }},
+};
+{% endfor %}
