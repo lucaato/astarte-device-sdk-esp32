@@ -67,4 +67,11 @@ config ASTARTE_HWID_UUID_NAMESPACE
     help
         This option controls the UUID namespace that will be fed to the UUIDv5 algorithm when generating the hardware ID (if the "Use UUIDv5 to derive the hardware ID" is enabled).
 
+config ASTARTE_INTERFACES_DIRECTORY
+    string "Project directory where your astarte interfaces are stored"
+    default "interfaces"
+    help
+        This option controls the generation of the base struct that you will use to interact with astarte.
+        Your interfaces will be flashed to the esp32 flash storage to give the sdk access to the mapping to perform validation
+
 endmenu
